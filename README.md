@@ -21,7 +21,7 @@ public class BlogContext : DbContext
     public DbSet<Blog> Blogs { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        => optionsBuilder.UseNpgsql(@"Host=myserver;Username=mylogin;Password=mypass;Database=mydatabase");
+        => optionsBuilder.UseGaussDB(@"host={host};port={port};username={username};password={password};database={database}");
 }
 
 public class Blog
