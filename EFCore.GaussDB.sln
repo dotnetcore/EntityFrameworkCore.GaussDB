@@ -19,10 +19,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{ED612DB1-A
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EFCore.GaussDB", "src\EFCore.GaussDB\EFCore.GaussDB.csproj", "{FADDA2D1-03B4-4DEF-8D24-DD1CA4E81F4A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GaussDB", "..\DotNetCore.GaussDB\src\GaussDB\GaussDB.csproj", "{2C874DAE-FB27-4111-B890-B66A79316D46}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GaussDB.DependencyInjection", "..\DotNetCore.GaussDB\src\GaussDB.DependencyInjection\GaussDB.DependencyInjection.csproj", "{A311EE92-7406-4732-ACAC-7F3D1CDCEE14}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,38 +37,12 @@ Global
 		{FADDA2D1-03B4-4DEF-8D24-DD1CA4E81F4A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FADDA2D1-03B4-4DEF-8D24-DD1CA4E81F4A}.Release|x64.ActiveCfg = Release|Any CPU
 		{FADDA2D1-03B4-4DEF-8D24-DD1CA4E81F4A}.Release|x86.ActiveCfg = Release|Any CPU
-		{2C874DAE-FB27-4111-B890-B66A79316D46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2C874DAE-FB27-4111-B890-B66A79316D46}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2C874DAE-FB27-4111-B890-B66A79316D46}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{2C874DAE-FB27-4111-B890-B66A79316D46}.Debug|x64.Build.0 = Debug|Any CPU
-		{2C874DAE-FB27-4111-B890-B66A79316D46}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{2C874DAE-FB27-4111-B890-B66A79316D46}.Debug|x86.Build.0 = Debug|Any CPU
-		{2C874DAE-FB27-4111-B890-B66A79316D46}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2C874DAE-FB27-4111-B890-B66A79316D46}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2C874DAE-FB27-4111-B890-B66A79316D46}.Release|x64.ActiveCfg = Release|Any CPU
-		{2C874DAE-FB27-4111-B890-B66A79316D46}.Release|x64.Build.0 = Release|Any CPU
-		{2C874DAE-FB27-4111-B890-B66A79316D46}.Release|x86.ActiveCfg = Release|Any CPU
-		{2C874DAE-FB27-4111-B890-B66A79316D46}.Release|x86.Build.0 = Release|Any CPU
-		{A311EE92-7406-4732-ACAC-7F3D1CDCEE14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A311EE92-7406-4732-ACAC-7F3D1CDCEE14}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A311EE92-7406-4732-ACAC-7F3D1CDCEE14}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{A311EE92-7406-4732-ACAC-7F3D1CDCEE14}.Debug|x64.Build.0 = Debug|Any CPU
-		{A311EE92-7406-4732-ACAC-7F3D1CDCEE14}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{A311EE92-7406-4732-ACAC-7F3D1CDCEE14}.Debug|x86.Build.0 = Debug|Any CPU
-		{A311EE92-7406-4732-ACAC-7F3D1CDCEE14}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A311EE92-7406-4732-ACAC-7F3D1CDCEE14}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A311EE92-7406-4732-ACAC-7F3D1CDCEE14}.Release|x64.ActiveCfg = Release|Any CPU
-		{A311EE92-7406-4732-ACAC-7F3D1CDCEE14}.Release|x64.Build.0 = Release|Any CPU
-		{A311EE92-7406-4732-ACAC-7F3D1CDCEE14}.Release|x86.ActiveCfg = Release|Any CPU
-		{A311EE92-7406-4732-ACAC-7F3D1CDCEE14}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{FADDA2D1-03B4-4DEF-8D24-DD1CA4E81F4A} = {8537E50E-CF7F-49CB-B4EF-3E2A1B11F050}
-		{2C874DAE-FB27-4111-B890-B66A79316D46} = {8537E50E-CF7F-49CB-B4EF-3E2A1B11F050}
-		{A311EE92-7406-4732-ACAC-7F3D1CDCEE14} = {8537E50E-CF7F-49CB-B4EF-3E2A1B11F050}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F4EAAE6D-758C-4184-9D8C-7113384B61A8}

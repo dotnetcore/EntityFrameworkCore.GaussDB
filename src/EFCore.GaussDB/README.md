@@ -1,6 +1,6 @@
 # GaussDB Entity Framework Core provider for PostgreSQL
 
-GaussDB.EntityFrameworkCore.PostgreSQL is the open source EF Core provider for PostgreSQL. It allows you to interact with PostgreSQL via the most widely-used .NET O/RM from Microsoft, and use familiar LINQ syntax to express queries. It's built on top of [GaussDB](https://github.com/GaussDB/GaussDB).
+DotNetCore.EntityFrameworkCore.GaussDB is the open source EF Core provider for PostgreSQL. It allows you to interact with PostgreSQL via the most widely-used .NET O/RM from Microsoft, and use familiar LINQ syntax to express queries. It's built on top of [DotNetCore.GaussDB](https://github.com/dotnetcore/DotNetCore.GaussDB).
 
 The provider looks and feels just like any other Entity Framework Core provider. Here's a quick sample to get you started:
 
@@ -21,7 +21,7 @@ public class BlogContext : DbContext
     public DbSet<Blog> Blogs { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        => optionsBuilder.UseGaussDB(@"Host=myserver;Username=mylogin;Password=mypass;Database=mydatabase");
+        => optionsBuilder.UseGaussDB(@"host={host};port={port};username={username};password={password};database={database}");
 }
 
 public class Blog
@@ -31,5 +31,5 @@ public class Blog
 }
 ```
 
-Aside from providing general EF Core support for PostgreSQL, the provider also exposes some PostgreSQL-specific capabilities, allowing you to query JSON, array or range columns, as well as many other advanced features. For more information, see the [the GaussDB site](http://www.GaussDB.org/efcore/index.html). For information about EF Core in general, see the [EF Core website](https://docs.microsoft.com/ef/core/).
+Aside from providing general EF Core support for GaussDB, the provider also exposes some GaussDB-specific capabilities, allowing you to query JSON, array or range columns, as well as many other advanced features. For more information. For information about EF Core in general, see the [EF Core website](https://docs.microsoft.com/ef/core/).
 

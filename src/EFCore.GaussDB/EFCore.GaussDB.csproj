@@ -17,7 +17,7 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore" PrivateAssets="none" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" PrivateAssets="none" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Abstractions" PrivateAssets="none" />
-    <!--<PackageReference Include="GaussDB" />-->
+    <PackageReference Include="DotNetCore.GaussDB" />
   </ItemGroup>
 
   <ItemGroup>
@@ -43,10 +43,6 @@
 
   <ItemGroup>
     <None Include="README.md" Pack="true" PackagePath="\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\DotNetCore.GaussDB\src\GaussDB\GaussDB.csproj" />
   </ItemGroup>
 
 </Project>
