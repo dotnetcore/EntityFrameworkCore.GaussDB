@@ -15,7 +15,12 @@
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <PackageLicenseExpression>PostgreSQL</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/dotnetcore/EntityFrameworkCore.GaussDB</PackageProjectUrl>
+    <PackageIcon>icon.png</PackageIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)icon.png" Pack="true" PackagePath="" />
+  </ItemGroup>
 
   <ItemGroup>
     <Using Include="System.Diagnostics" />
