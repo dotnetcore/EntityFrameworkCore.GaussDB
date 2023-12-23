@@ -1,5 +1,10 @@
 # GaussDB Entity Framework Core provider for PostgreSQL
 
+[![Member project of .NET Core Community](https://img.shields.io/badge/member%20project%20of-NCC-9e20c9.svg)](https://github.com/dotnetcore) 
+[![nuget](https://img.shields.io/nuget/v/DotNetCore.EntityFrameworkCore.GaussDB.svg?style=flat-square)](https://www.nuget.org/packages/DotNetCore.EntityFrameworkCore.GaussDB) 
+[![stats](https://img.shields.io/nuget/dt/DotNetCore.EntityFrameworkCore.GaussDB.svg?style=flat-square)](https://www.nuget.org/stats/packages/DotNetCore.EntityFrameworkCore.GaussDB?groupby=Version) 
+
+
 DotNetCore.EntityFrameworkCore.GaussDB is the open source EF Core provider for PostgreSQL. It allows you to interact with PostgreSQL via the most widely-used .NET O/RM from Microsoft, and use familiar LINQ syntax to express queries. It's built on top of [DotNetCore.GaussDB](https://github.com/dotnetcore/DotNetCore.GaussDB).
 
 The provider looks and feels just like any other Entity Framework Core provider. Here's a quick sample to get you started:
