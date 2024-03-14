@@ -1,6 +1,6 @@
 <Project>
   <PropertyGroup>
-    <VersionPrefix>8.0.0</VersionPrefix>
+    <VersionPrefix>8.0.1</VersionPrefix>
     <LangVersion>preview</LangVersion>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <AnalysisLevel>latest</AnalysisLevel>
@@ -11,7 +11,7 @@
     <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
     <ImplicitUsings>true</ImplicitUsings>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
-
+    <Description>修复数组函数【array_position】在高斯中已被剔除</Description>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <PackageLicenseExpression>PostgreSQL</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/dotnetcore/EntityFrameworkCore.GaussDB</PackageProjectUrl>

@@ -607,7 +607,7 @@ public class GaussDBQueryableMethodTranslatingExpressionVisitor : RelationalQuer
                 case ColumnExpression:
                     if (translatedItem is SqlConstantExpression { Value: null })
                     {
-                        // We special-case null constant item and use array_position instead, since it does
+                        // We special-case null constant item and use array_next instead, since it does
                         // nulls correctly (but doesn't use indexes)
                         // TODO: once lambda-based caching is implemented, move this to GaussDBSqlNullabilityProcessor
                         // (https://github.com/dotnet/efcore/issues/17598) and do for parameters as well.
@@ -615,7 +615,7 @@ public class GaussDBQueryableMethodTranslatingExpressionVisitor : RelationalQuer
                             source,
                             _sqlExpressionFactory.IsNotNull(
                                 _sqlExpressionFactory.Function(
-                                    "array_position",
+                                    "array_next",
                                     new[] { array, translatedItem },
                                     nullable: true,
                                     argumentsPropagateNullability: FalseArrays[2],

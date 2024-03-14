@@ -234,8 +234,8 @@ public class GaussDBSqlNullabilityProcessor : SqlNullabilityProcessor
 
         // non_nullable = ANY(array) -> non_nullable = ANY(array) (optimized)
         // non_nullable = ANY(array) -> non_nullable = ANY(array) AND (non_nullable = ANY(array) IS NOT NULL) (full)
-        // nullable = ANY(array) -> nullable = ANY(array) OR (nullable IS NULL AND array_position(array, NULL) IS NOT NULL) (optimized)
-        // nullable = ANY(array) -> (nullable = ANY(array) AND (nullable = ANY(array) IS NOT NULL)) OR (nullable IS NULL AND array_position(array, NULL) IS NOT NULL) (full)
+        // nullable = ANY(array) -> nullable = ANY(array) OR (nullable IS NULL AND array_next(array, NULL) IS NOT NULL) (optimized)
+        // nullable = ANY(array) -> (nullable = ANY(array) AND (nullable = ANY(array) IS NOT NULL)) OR (nullable IS NULL AND array_next(array, NULL) IS NOT NULL) (full)
 
         nullable = false;
 
@@ -252,7 +252,7 @@ public class GaussDBSqlNullabilityProcessor : SqlNullabilityProcessor
         }
 
         // If the item is nullable, add an OR to check for the item being null and the array containing null.
-        // The latter check is done with array_position, which returns null when a value was not found, and
+        // The latter check is done with array_next, which returns null when a value was not found, and
         // a position if the item (including null!) was found (IS NOT DISTINCT FROM semantics)
         return _sqlExpressionFactory.OrElse(
             updated,
@@ -260,7 +260,7 @@ public class GaussDBSqlNullabilityProcessor : SqlNullabilityProcessor
                 _sqlExpressionFactory.IsNull(item),
                 _sqlExpressionFactory.IsNotNull(
                     _sqlExpressionFactory.Function(
-                        "array_position",
+                        "array_next",
                         new[] { array, _sqlExpressionFactory.Constant(null, item.TypeMapping) },
                         nullable: true,
                         argumentsPropagateNullability: FalseArrays[2],

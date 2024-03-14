@@ -126,7 +126,7 @@ public class GaussDBArrayMethodTranslator : IMethodCallTranslator
                 return _sqlExpressionFactory.Coalesce(
                     _sqlExpressionFactory.Subtract(
                         _sqlExpressionFactory.Function(
-                            "array_position",
+                            "array_next",
                             new[] { array, item },
                             nullable: true,
                             TrueArrays[2],
@@ -146,7 +146,7 @@ public class GaussDBArrayMethodTranslator : IMethodCallTranslator
                 return _sqlExpressionFactory.Coalesce(
                     _sqlExpressionFactory.Subtract(
                         _sqlExpressionFactory.Function(
-                            "array_position",
+                            "array_next",
                             new[] { array, item, startIndex },
                             nullable: true,
                             TrueArrays[3],
