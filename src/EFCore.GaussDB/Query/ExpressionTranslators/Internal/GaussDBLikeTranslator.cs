@@ -87,7 +87,7 @@ public class GaussDBLikeTranslator : IMethodCallTranslator
         }
 
         return sensitive
-            ? _sqlExpressionFactory.Like(match, pattern, _sqlExpressionFactory.Constant(string.Empty))
-            : _sqlExpressionFactory.ILike(match, pattern, _sqlExpressionFactory.Constant(string.Empty));
+            ? _sqlExpressionFactory.Like(match, pattern, _sqlExpressionFactory.Constant("\\"))
+            : _sqlExpressionFactory.ILike(match, pattern, _sqlExpressionFactory.Constant("\\"));
     }
 }
