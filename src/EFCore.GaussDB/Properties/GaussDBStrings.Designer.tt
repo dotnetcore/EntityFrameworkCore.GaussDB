@@ -1,0 +1,5 @@
+<#
+    Session["ResourceFile"] = "GaussDBStrings.resx";
+    Session["LoggingDefinitionsClass"] = "Diagnostics.Internal.GaussDBLoggingDefinitions";
+#>
+<#@ include file="..\..\..\tools\Resources.tt" #>
