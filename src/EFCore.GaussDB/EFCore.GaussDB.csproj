@@ -26,6 +26,10 @@
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
+    <None Include="..\..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
 
     <None Update="Properties\GaussDBStrings.Designer.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
