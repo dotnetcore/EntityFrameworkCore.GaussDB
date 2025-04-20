@@ -78,16 +78,14 @@ public class GaussDBLikeTranslator : IMethodCallTranslator
 
         var (match, pattern) = (arguments[1], arguments[2]);
 
-        if (pattern is SqlConstantExpression { Value: string patternValue }
-            && !patternValue.Contains('\\'))
+        return pattern switch
         {
-            return sensitive
-                ? _sqlExpressionFactory.Like(match, pattern)
-                : _sqlExpressionFactory.ILike(match, pattern);
-        }
-
-        return sensitive
-            ? _sqlExpressionFactory.Like(match, pattern, _sqlExpressionFactory.Constant(string.Empty))
-            : _sqlExpressionFactory.ILike(match, pattern, _sqlExpressionFactory.Constant(string.Empty));
+            SqlConstantExpression { Value: string patternValue } when !patternValue.Contains('\\') => sensitive
+                ? _sqlExpressionFactory.Like(match, pattern, _sqlExpressionFactory.Constant("\\"))
+                : _sqlExpressionFactory.ILike(match, pattern, _sqlExpressionFactory.Constant("\\")),
+            _ => sensitive
+            ? _sqlExpressionFactory.Like(match, pattern, _sqlExpressionFactory.Constant("\\"))
+            : _sqlExpressionFactory.ILike(match, pattern, _sqlExpressionFactory.Constant("\\"))
+        };
     }
 }
