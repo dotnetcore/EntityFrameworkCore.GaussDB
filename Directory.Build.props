@@ -11,7 +11,7 @@
     <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
     <ImplicitUsings>true</ImplicitUsings>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <Description>修复数组函数【array_position】在高斯中已被剔除</Description>
+    <Description>修复GaussDB 3.1.0版本中使用EF.Functions.Like方法翻译无法命中BUG</Description>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <PackageLicenseExpression>PostgreSQL</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/dotnetcore/EntityFrameworkCore.GaussDB</PackageProjectUrl>
