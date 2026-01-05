@@ -45,6 +45,5 @@ public class GaussDBQueryCompilationContextFactory : IQueryCompilationContextFac
     /// </summary>
     public virtual QueryCompilationContext CreatePrecompiled(bool async, IReadOnlySet<string> nonNullableReferenceTypeParameters)
         => new GaussDBQueryCompilationContext(
-            _dependencies, _relationalDependencies, async, precompiling: true,
-            nonNullableReferenceTypeParameters);
+            _dependencies, _relationalDependencies, async, precompiling: true);
 }
